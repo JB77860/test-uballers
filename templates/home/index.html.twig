@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+   <form method="post" >
+
+      <div class="justify-content-center col-md-8">
+            <div>
+               <label>Adresse e-mail ou mobile</label>
+               <input type="text" placeholder="Votre login">
+               <label>Mot de passe</label>
+               <input type="text" placeholder="Votre mot de passe">
+               <a href="">Informations de compte oubliées ?</a>
+            </div>
+               <button type="submit" class="btn btn-primary">Connexion</button>
+         </div>
+   </form>
+
+   <div class="justify-content-center col-md-8">
+   <h2>Inscription</h2>
+   <h4>C'est gratuit(et ça le restera toujours)</h4>
+
+   <form method="post">
+      <div class="form-group">
+         <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Prénom">
+         <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom de famille">
+      </div>
+      <div>
+         <input type="text" id="login" name="login" class="form-control" placeholder="Numéro de mobile ou email">
+      </div>
+      <div>
+         <input type="text" id="login_control" name="login_control" class="form-control"
+                placeholder="Confirmer numéro de mobile ou email">
+      </div>
+      <div>
+         <input type="text" id="mot_de_passe" name="mot_de_passe" class="form-control"
+                placeholder="Nouveau mot de passe">
+      </div>
+
+      <h3>Date de naissance</h3>
+
+      <div id="date_naissance" type="date">
+         <select name="Jour">
+            <option value="" disabled selected>Jour</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+         </select>
+
+         <select name="mois">
+            <option value="mois" disabled selected>Mois</option>
+            <option>Janvier</option>
+            <option>Février</option>
+            <option>Mars</option>
+            <option>Avril</option>
+            <option>Mai</option>
+            <option>Juin</option>
+            <option>Juillet</option>
+            <option>Août</option>
+            <option>Septembre</option>
+            <option>Octobre</option>
+            <option>Novembre</option>
+            <option>Décembre</option>
+         </select>
+
+         <select name="annee">
+            <option value="" disabled selected>Année</option>
+            <option>1980</option>
+            <option>1981</option>
+            <option>1982</option>
+            <option>1983</option>
+         </select>
+
+         <p>
+            Pourquoi indiquer ma date de naissance ?
+         </p>
+
+      </div>
+
+      <div>
+         <input type="radio" id="femme" name="sexe" value="femme">
+         <label for="femme">Femme</label>
+         <input type="radio" id="homme" name="sexe" value="homme">
+         <label for="homme">Homme</label>
+      </div>
+
+      <p>
+         En cliquant sur inscription, vous acceptez nos conditions et indiquez que vous avez lu notre
+         Politique d'utilisation des données, y compris notre Utilisation des cookies. Vous pourrez
+         recevoir des notifications par texto de la part de Facebook et pouvez vous désabonner à tout moment.
+      </p>
+
+      <div class="form-group">
+         <button type="submit" class="btn btn-block btn-success">Inscription</button>
+      </div>
+   </form>
+   </div>
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
